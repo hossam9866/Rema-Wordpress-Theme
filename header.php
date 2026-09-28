@@ -32,9 +32,6 @@ if (!$ramroma_logo || strpos($ramroma_logo, 'brand-ramroma-logo.png') !== false 
                 <span class="rema-logo-line"></span><img src="<?php echo esc_url($ramroma_logo); ?>" alt="Ramroma">
             </a>
             <div class="rema-header-actions order-2 order-lg-3">
-                <a href="<?php echo esc_url($s['header']['search_url']); ?>" aria-label="<?php esc_attr_e('Search', 'rima-ramroma'); ?>"><img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/icon-search.svg'); ?>" alt=""></a>
-                <a class="rema-cart" href="<?php echo esc_url($s['header']['cart_url']); ?>" aria-label="<?php esc_attr_e('Cart', 'rima-ramroma'); ?>"><img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/icon-bag.svg'); ?>" alt=""><span><?php echo function_exists('WC') && WC()->cart ? esc_html(WC()->cart->get_cart_contents_count()) : '0'; ?></span></a>
-                <a class="rema-account" href="<?php echo esc_url($s['header']['account_url']); ?>"><img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/icon-user.svg'); ?>" alt=""><small><?php echo wp_kses_post(rema_t($s['header']['account_label'])); ?></small></a>
                 <?php echo rema_language_switcher(); ?>
             </div>
         </div>

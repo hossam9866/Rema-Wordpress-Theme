@@ -33,3 +33,8 @@ body.rtl,.rtl body{direction:rtl}.rtl .rema-hero:after{background:linear-gradien
 @media(max-width:991.98px){.rema-header{height:auto;min-height:82px}.rema-header .navbar{min-height:82px}.rema-header .navbar-collapse{padding:8px 0 14px}.rema-header .nav-link:after{right:10px;left:10px}.rema-header-logos>img{max-width:82px;max-height:46px}}
 @media(max-width:575.98px){.rema-header{min-height:72px}.rema-header .navbar{min-height:72px}.rema-babechic{font-size:24px}.rema-babechic small{font-size:7px}}
 @media(prefers-reduced-motion:reduce){.rema-btn,.rema-btn i,.rema-header .nav-link:after,.rema-header-actions>a,.rema-socials a,.rema-footer li a{transition:none!important}}
+
+/* Keep the dual-brand lockup centered after removing commerce/account actions. */
+.rema-header-actions:empty{min-width:1px}
+@media(max-width:991.98px){.rema-header-logos{position:absolute;left:50%;transform:translateX(-50%);margin:0}.rema-header-actions{margin-inline-start:auto;min-width:40px;justify-content:flex-end}}
+@media(max-width:575.98px){.rema-header-logos .rema-logo-line{display:block;height:24px}.rema-header-logos>img{display:block;max-width:68px;max-height:38px}.rema-header-logos{gap:8px}.rema-rima-logo{width:58px}.rema-rima-logo img:first-child{height:15px}.rema-rima-logo img:nth-child(2){width:58px;margin-top:3px}}
