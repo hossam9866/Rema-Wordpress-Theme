@@ -188,3 +188,52 @@ html,body{width:100%;max-width:100%;overflow-x:hidden}
   .rema-banner-copy{width:61%}
   .rema-lifestyle-copy,.rema-lifestyle-back .rema-lifestyle-copy{width:70%}
 }
+
+/* Figma 1:1759 - exact dual-brand card composition. */
+.rema-brands{padding-block:26px 54px}
+.rema-brands .container{width:1219px;max-width:none;margin-left:calc((100% - 1178px)/2);margin-right:0;padding:0}
+.rema-brands h2{height:50px;display:flex;align-items:center;line-height:50px;overflow-wrap:normal;word-break:normal}
+.rema-brands h2 .rema-script{white-space:nowrap}
+.rema-brand-grid{display:grid;grid-template-columns:repeat(2,578px);gap:63px;margin:34px 0 0 2px}
+.rema-brand-card{width:578px;height:537px;border-radius:56px}
+.rema-page .rema-brand-photo{position:absolute;display:block;max-width:none}
+.rema-brand-card.rema-brand-card-rima>.rema-brand-photo{top:-9.22%;left:-3.45%;width:239.95%;height:193.76%;object-fit:fill;object-position:50% 50%;transform:none}
+.rema-brand-card-ramroma>.rema-brand-photo{inset:0;width:100%;height:100%;object-fit:cover;transform:none}
+.rema-brand-copy{inset:auto;padding:0;display:block;width:auto}
+.rema-brand-card-rima .rema-brand-copy{top:32px;left:71px;width:192px;mix-blend-mode:multiply}
+.rema-brand-card-ramroma .rema-brand-copy{top:56px;left:344px;width:206px}
+.rema-brand-logo{display:block;margin:0;max-width:none}
+.rema-brand-rima{width:168px;height:128px;object-fit:contain;mix-blend-mode:multiply}
+.rema-ramroma-logo{width:199px;height:104px;object-fit:cover;margin-left:-15px}
+.rema-brand-copy p{display:flex;align-items:center;width:100%;max-width:none;margin:0;color:#5c5c5c;font-size:18px;font-weight:400;line-height:1.2;letter-spacing:.09px}
+.rema-brand-card-rima .rema-brand-copy p{height:177px;margin-top:47px}
+.rema-brand-card-ramroma .rema-brand-copy p{height:317px;margin-top:17px}
+
+@media(max-width:1299.98px){
+  .rema-brands .container{width:auto;max-width:1140px;margin-inline:auto;padding-inline:12px}
+  .rema-brand-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+  .rema-brand-card{width:100%;height:auto;aspect-ratio:578/537}
+  .rema-brand-card-rima .rema-brand-copy{top:5.96%;left:12.28%;width:33.22%}
+  .rema-brand-card-ramroma .rema-brand-copy{top:10.43%;left:59.52%;width:35.64%}
+  .rema-brand-rima{width:87.5%;height:auto;aspect-ratio:168/128}
+  .rema-ramroma-logo{width:96.6%;height:auto;aspect-ratio:199/104;margin-left:-7.28%}
+  .rema-brand-card-rima .rema-brand-copy p{height:auto;min-height:177px;margin-top:8.75%}
+  .rema-brand-card-ramroma .rema-brand-copy p{height:auto;min-height:317px;margin-top:8.25%}
+}
+
+@media(max-width:991.98px){
+  .rema-brands{padding-block:40px 52px}
+  .rema-brands .container{max-width:720px}
+  .rema-brands h2{height:auto;display:block;line-height:1.25}
+  .rema-brand-grid{grid-template-columns:minmax(0,578px);justify-content:center;gap:24px;margin-top:28px}
+  .rema-brand-copy p{font-size:16px}
+}
+
+@media(max-width:575.98px){
+  .rema-brands{padding-block:35px 50px}
+  .rema-brand-grid{margin-top:22px}
+  .rema-brand-card{border-radius:clamp(28px,9.69vw,56px)}
+  .rema-brand-copy p{font-size:clamp(10.5px,3.11vw,18px)}
+  .rema-brand-card-rima .rema-brand-copy p{min-height:30.73vw;margin-top:8.75%}
+  .rema-brand-card-ramroma .rema-brand-copy p{min-height:54.84vw;margin-top:8.25%}
+}
