@@ -59,18 +59,19 @@ body.rtl,.rtl body{direction:rtl}.rtl .rema-hero:after{background:linear-gradien
 html,body{width:100%;max-width:100%;overflow-x:hidden}
 @supports(overflow:clip){html,body{overflow-x:clip}}
 .rema-header,.rema-page,.rema-footer,.rema-page>section{width:100%;max-width:100%;overflow-x:hidden}
-.rema-header .container-fluid,.rema-page .container,.rema-footer .container{width:100%;max-width:100%}
+.rema-header .container-fluid{width:100%;max-width:100%}
+.rema-page .container,.rema-footer .container{width:1219px;max-width:calc(100% - 96px);margin-inline:auto;padding-inline:0}
 .rema-page h1,.rema-page h2,.rema-page h3,.rema-page p,.rema-copy,.rema-footer,.rema-footer a{overflow-wrap:anywhere;word-break:normal}
 .rema-page img,.rema-footer img{max-width:100%}
 .rema-btn{max-width:100%;white-space:normal;text-align:center;justify-content:center}
 .rema-brand-card,.rema-mission-card,.rema-value,.rema-banner-copy,.rema-lifestyle-copy,.rema-hero-content{min-width:0;max-width:100%}
 .rema-values-grid{grid-template-columns:repeat(5,minmax(0,1fr))}
 @media(max-width:767.98px){
-  .rema-page .container,.rema-footer .container{padding-inline:16px}
+  .rema-page .container,.rema-footer .container{max-width:calc(100% - 48px);padding-inline:0}
   .rema-page .row,.rema-footer .row{--bs-gutter-x:1.25rem;margin-inline:calc(-.5 * var(--bs-gutter-x))}
   .rema-page .row>*,.rema-footer .row>*{min-width:0;padding-inline:calc(.5 * var(--bs-gutter-x))}
   .rema-values-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
-  .rema-divider .container{max-width:100%;overflow:hidden;flex-wrap:nowrap}
+  .rema-divider .container{overflow:hidden;flex-wrap:nowrap}
   .rema-divider .container>span{flex:1 1 24px;width:auto;min-width:12px;max-width:45px}
   .rema-divider p{flex:0 1 auto;min-width:0;font-size:clamp(17px,4.8vw,24px)}
   .rema-babechic{flex:0 1 auto;min-width:0;font-size:clamp(22px,6vw,30px)}
@@ -79,7 +80,7 @@ html,body{width:100%;max-width:100%;overflow-x:hidden}
   .rema-lifestyle-copy,.rema-lifestyle-back .rema-lifestyle-copy{max-width:72%}
 }
 @media(max-width:575.98px){
-  .rema-page .container,.rema-footer .container{padding-inline:14px}
+  .rema-page .container,.rema-footer .container{max-width:calc(100% - 40px);padding-inline:0}
   .rema-values-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
   .rema-value span{max-width:100%;font-size:13px}
   .rema-socials,.rema-payments,.rema-footer-logos{max-width:100%;flex-wrap:wrap}
@@ -192,7 +193,7 @@ html,body{width:100%;max-width:100%;overflow-x:hidden}
 /* Figma 1:1759 - exact dual-brand card composition. */
 .rema-brands{padding-block:26px 54px}
 .rema-brands .container{width:1219px;max-width:calc(100% - 48px);margin-inline:auto;padding:0}
-.rema-brands h2{height:50px;display:flex;align-items:center;line-height:50px;overflow-wrap:normal;word-break:normal}
+.rema-brands h2{min-height:50px;display:block;line-height:50px;overflow-wrap:normal;word-break:normal}
 .rema-brands h2 .rema-script{white-space:nowrap}
 .rema-brand-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:63px;margin:34px 0 0}
 .rema-brand-card{width:578px;height:537px;border-radius:56px}
@@ -200,7 +201,7 @@ html,body{width:100%;max-width:100%;overflow-x:hidden}
 .rema-brand-card.rema-brand-card-rima>.rema-brand-photo{top:-9.22%;left:-3.45%;width:239.95%;height:193.76%;object-fit:fill;object-position:50% 50%;transform:none}
 .rema-brand-card-ramroma>.rema-brand-photo{inset:0;width:100%;height:100%;object-fit:cover;transform:none}
 .rema-brand-copy{inset:auto;padding:0;display:block;width:auto}
-.rema-brand-card-rima .rema-brand-copy{top:32px;left:71px;width:192px;mix-blend-mode:multiply}
+.rema-brand-card.rema-brand-card-rima .rema-brand-copy{top:32px;left:71px;right:auto;width:192px;mix-blend-mode:multiply}
 .rema-brand-card-ramroma .rema-brand-copy{top:56px;left:344px;width:206px}
 .rema-brand-logo{display:block;margin:0;max-width:none}
 .rema-brand-rima{width:168px;height:128px;object-fit:contain;mix-blend-mode:multiply}
@@ -213,7 +214,7 @@ html,body{width:100%;max-width:100%;overflow-x:hidden}
   .rema-brands .container{width:1140px;max-width:calc(100% - 48px);margin-inline:auto;padding-inline:0}
   .rema-brand-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
   .rema-brand-card{width:100%;height:auto;aspect-ratio:578/537}
-  .rema-brand-card-rima .rema-brand-copy{top:5.96%;left:12.28%;width:33.22%}
+  .rema-brand-card.rema-brand-card-rima .rema-brand-copy{top:5.96%;left:12.28%;width:33.22%}
   .rema-brand-card-ramroma .rema-brand-copy{top:10.43%;left:59.52%;width:35.64%}
   .rema-brand-rima{width:87.5%;height:auto;aspect-ratio:168/128}
   .rema-ramroma-logo{width:96.6%;height:auto;aspect-ratio:199/104;margin-left:-7.28%}
@@ -223,7 +224,7 @@ html,body{width:100%;max-width:100%;overflow-x:hidden}
 
 @media(max-width:991.98px){
   .rema-brands{padding-block:40px 52px}
-  .rema-brands .container{width:578px;max-width:calc(100% - 32px);padding-inline:0}
+  .rema-brands .container{width:578px;max-width:calc(100% - 48px);padding-inline:0}
   .rema-brands h2{height:auto;display:block;line-height:1.25}
   .rema-brand-grid{grid-template-columns:minmax(0,578px);justify-content:center;gap:24px;margin-top:28px}
   .rema-brand-copy p{font-size:16px}
@@ -231,7 +232,7 @@ html,body{width:100%;max-width:100%;overflow-x:hidden}
 
 @media(max-width:575.98px){
   .rema-brands{padding-block:35px 50px}
-  .rema-brands .container{max-width:calc(100% - 28px);padding-inline:0}
+  .rema-brands .container{max-width:calc(100% - 40px);padding-inline:0}
   .rema-brand-grid{margin-top:22px}
   .rema-brand-card{border-radius:clamp(28px,9.69vw,56px)}
   .rema-brand-copy p{font-size:clamp(10.5px,3.11vw,18px)}
