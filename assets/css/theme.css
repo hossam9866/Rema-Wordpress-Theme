@@ -191,10 +191,10 @@ html,body{width:100%;max-width:100%;overflow-x:hidden}
 
 /* Figma 1:1759 - exact dual-brand card composition. */
 .rema-brands{padding-block:26px 54px}
-.rema-brands .container{width:1219px;max-width:none;margin-left:calc((100% - 1178px)/2);margin-right:0;padding:0}
+.rema-brands .container{width:1219px;max-width:calc(100% - 48px);margin-inline:auto;padding:0}
 .rema-brands h2{height:50px;display:flex;align-items:center;line-height:50px;overflow-wrap:normal;word-break:normal}
 .rema-brands h2 .rema-script{white-space:nowrap}
-.rema-brand-grid{display:grid;grid-template-columns:repeat(2,578px);gap:63px;margin:34px 0 0 2px}
+.rema-brand-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:63px;margin:34px 0 0}
 .rema-brand-card{width:578px;height:537px;border-radius:56px}
 .rema-page .rema-brand-photo{position:absolute;display:block;max-width:none}
 .rema-brand-card.rema-brand-card-rima>.rema-brand-photo{top:-9.22%;left:-3.45%;width:239.95%;height:193.76%;object-fit:fill;object-position:50% 50%;transform:none}
@@ -210,7 +210,7 @@ html,body{width:100%;max-width:100%;overflow-x:hidden}
 .rema-brand-card-ramroma .rema-brand-copy p{height:317px;margin-top:17px}
 
 @media(max-width:1299.98px){
-  .rema-brands .container{width:auto;max-width:1140px;margin-inline:auto;padding-inline:12px}
+  .rema-brands .container{width:1140px;max-width:calc(100% - 48px);margin-inline:auto;padding-inline:0}
   .rema-brand-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
   .rema-brand-card{width:100%;height:auto;aspect-ratio:578/537}
   .rema-brand-card-rima .rema-brand-copy{top:5.96%;left:12.28%;width:33.22%}
@@ -223,7 +223,7 @@ html,body{width:100%;max-width:100%;overflow-x:hidden}
 
 @media(max-width:991.98px){
   .rema-brands{padding-block:40px 52px}
-  .rema-brands .container{max-width:720px}
+  .rema-brands .container{width:578px;max-width:calc(100% - 32px);padding-inline:0}
   .rema-brands h2{height:auto;display:block;line-height:1.25}
   .rema-brand-grid{grid-template-columns:minmax(0,578px);justify-content:center;gap:24px;margin-top:28px}
   .rema-brand-copy p{font-size:16px}
@@ -231,6 +231,7 @@ html,body{width:100%;max-width:100%;overflow-x:hidden}
 
 @media(max-width:575.98px){
   .rema-brands{padding-block:35px 50px}
+  .rema-brands .container{max-width:calc(100% - 28px);padding-inline:0}
   .rema-brand-grid{margin-top:22px}
   .rema-brand-card{border-radius:clamp(28px,9.69vw,56px)}
   .rema-brand-copy p{font-size:clamp(10.5px,3.11vw,18px)}
