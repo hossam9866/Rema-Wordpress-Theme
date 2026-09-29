@@ -38,3 +38,153 @@ body.rtl,.rtl body{direction:rtl}.rtl .rema-hero:after{background:linear-gradien
 .rema-header-actions:empty{min-width:1px}
 @media(max-width:991.98px){.rema-header-logos{position:absolute;left:50%;transform:translateX(-50%);margin:0}.rema-header-actions{margin-inline-start:auto;min-width:40px;justify-content:flex-end}}
 @media(max-width:575.98px){.rema-header-logos .rema-logo-line{display:block;height:24px}.rema-header-logos>img{display:block;max-width:68px;max-height:38px}.rema-header-logos{gap:8px}.rema-rima-logo{width:58px}.rema-rima-logo img:first-child{height:15px}.rema-rima-logo img:nth-child(2){width:58px;margin-top:3px}}
+
+/* Brand cards: reserve a clean text column and keep each model on the opposite side. */
+.rema-brand-copy{inset:auto;top:0;bottom:0;width:40%;padding:32px;justify-content:center}
+.rema-brand-card:not(.rema-brand-card-ramroma) .rema-brand-copy{left:0;right:auto}
+.rema-brand-card-ramroma .rema-brand-copy{right:0;left:auto}
+.rema-brand-card:not(.rema-brand-card-ramroma)>img{transform:scaleX(-1);object-position:center}
+.rema-brand-card-ramroma>img{transform:none;object-position:left center}
+.rema-brand-copy p{max-width:210px}
+.rema-brand-card-ramroma .rema-brand-copy{align-items:flex-start}
+.rtl .rema-brand-card:not(.rema-brand-card-ramroma) .rema-brand-copy{right:0;left:auto}
+.rtl .rema-brand-card-ramroma .rema-brand-copy{left:0;right:auto}
+.rtl .rema-brand-card:not(.rema-brand-card-ramroma)>img{transform:none;object-position:left center}
+.rtl .rema-brand-card-ramroma>img{transform:scaleX(-1);object-position:center}
+@media(max-width:1199.98px){.rema-brand-copy{width:42%;padding:24px}.rema-brand-copy p{font-size:13px}.rema-brand-logo{margin-bottom:22px}}
+@media(max-width:767.98px){.rema-brand-copy{width:42%;padding:22px}.rema-brand-copy p{font-size:12px}.rema-brand-rima{width:112px}.rema-brand-rima img:nth-child(2){width:112px}.rema-ramroma-logo{width:130px}}
+@media(max-width:575.98px){.rema-brand-copy{width:44%;padding:14px}.rema-brand-copy p{font-size:10.5px;line-height:1.22}.rema-brand-logo{margin-bottom:14px}.rema-brand-rima{width:82px}.rema-brand-rima img:nth-child(2){width:82px}.rema-ramroma-logo{width:98px}}
+
+/* Mobile overflow guardrails for every front-end section. */
+html,body{width:100%;max-width:100%;overflow-x:hidden}
+@supports(overflow:clip){html,body{overflow-x:clip}}
+.rema-header,.rema-page,.rema-footer,.rema-page>section{width:100%;max-width:100%;overflow-x:hidden}
+.rema-header .container-fluid,.rema-page .container,.rema-footer .container{width:100%;max-width:100%}
+.rema-page h1,.rema-page h2,.rema-page h3,.rema-page p,.rema-copy,.rema-footer,.rema-footer a{overflow-wrap:anywhere;word-break:normal}
+.rema-page img,.rema-footer img{max-width:100%}
+.rema-btn{max-width:100%;white-space:normal;text-align:center;justify-content:center}
+.rema-brand-card,.rema-mission-card,.rema-value,.rema-banner-copy,.rema-lifestyle-copy,.rema-hero-content{min-width:0;max-width:100%}
+.rema-values-grid{grid-template-columns:repeat(5,minmax(0,1fr))}
+@media(max-width:767.98px){
+  .rema-page .container,.rema-footer .container{padding-inline:16px}
+  .rema-page .row,.rema-footer .row{--bs-gutter-x:1.25rem;margin-inline:calc(-.5 * var(--bs-gutter-x))}
+  .rema-page .row>*,.rema-footer .row>*{min-width:0;padding-inline:calc(.5 * var(--bs-gutter-x))}
+  .rema-values-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .rema-divider .container{max-width:100%;overflow:hidden;flex-wrap:nowrap}
+  .rema-divider .container>span{flex:1 1 24px;width:auto;min-width:12px;max-width:45px}
+  .rema-divider p{flex:0 1 auto;min-width:0;font-size:clamp(17px,4.8vw,24px)}
+  .rema-babechic{flex:0 1 auto;min-width:0;font-size:clamp(22px,6vw,30px)}
+  .rema-brand-card{width:100%}
+  .rema-brand-logo{max-width:100%}
+  .rema-lifestyle-copy,.rema-lifestyle-back .rema-lifestyle-copy{max-width:72%}
+}
+@media(max-width:575.98px){
+  .rema-page .container,.rema-footer .container{padding-inline:14px}
+  .rema-values-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .rema-value span{max-width:100%;font-size:13px}
+  .rema-socials,.rema-payments,.rema-footer-logos{max-width:100%;flex-wrap:wrap}
+  .rema-footer [class*="col-"]{min-width:0}
+  .rema-divider .container{gap:7px!important}
+  .rema-divider .container>span{min-width:8px}
+  .rema-babechic small{letter-spacing:.1em}
+}
+@media(max-width:359.98px){
+  .rema-header-logos{gap:5px}
+  .rema-header-logos>img{max-width:56px;max-height:32px}
+  .rema-rima-logo{width:50px}
+  .rema-rima-logo img:nth-child(2){width:50px}
+  .rema-logo-line{height:20px}
+  .rema-language .btn{font-size:11px;padding-inline:2px}
+  .rema-brand-copy{width:47%;padding:10px}
+  .rema-brand-copy p{font-size:9.5px}
+  .rema-divider p{font-size:15px}
+  .rema-babechic{font-size:20px}
+}
+
+/* Desktop header: navigation on the left, dual-brand lockup at the far right. */
+@media(min-width:992px){
+  .rema-header .container-fluid{--rema-header-edge:48px;--rema-header-lockup:220px;padding-right:var(--rema-header-edge)!important}
+  .rema-header-logos{position:absolute;right:var(--rema-header-edge);left:auto;transform:none;margin:0}
+  .rema-header-actions{position:absolute;right:calc(var(--rema-header-edge) + var(--rema-header-lockup) + 16px);margin:0}
+}
+@media(min-width:992px) and (max-width:1199.98px){
+  .rema-header .container-fluid{--rema-header-edge:24px;--rema-header-lockup:190px}
+}
+
+/* Final responsive pass: stable phone/tablet layouts without cropped content. */
+@media(min-width:576px) and (max-width:991.98px){
+  .rema-page h2{font-size:clamp(27px,4vw,var(--rema-heading))}
+  .rema-brand-copy{width:43%;padding:26px}
+  .rema-brand-copy p{font-size:14px;line-height:1.35}
+  .rema-banner-copy{width:min(58%,520px)}
+  .rema-footer .row{--bs-gutter-y:2.25rem}
+}
+
+@media(max-width:575.98px){
+  .section-pad{padding-block:42px}
+  .rema-page h1{font-size:clamp(30px,9vw,var(--rema-hero))}
+  .rema-page h2{font-size:clamp(23px,7vw,var(--rema-heading));line-height:1.2}
+  .rema-page h3{line-height:1.25}
+  .rema-copy,.rema-page p{font-size:14px;line-height:1.45}
+
+  .rema-header .navbar-collapse{flex-basis:100%;background:#fff;padding:8px 0 14px}
+  .rema-header .navbar-nav{width:100%}
+  .rema-header .nav-link{width:100%;padding:10px 0!important}
+
+  .rema-hero-content{width:min(88%,330px)}
+  .rema-hero h1{max-width:300px}
+
+  .rema-brand-card{height:390px}
+  .rema-brand-copy{width:47%;padding:16px 12px}
+  .rema-brand-copy p{font-size:11px;line-height:1.3;max-width:145px}
+  .rema-brand-rima{width:88px}
+  .rema-brand-rima img:nth-child(2){width:88px}
+  .rema-ramroma-logo{width:105px}
+  .rema-brand-card:not(.rema-brand-card-ramroma)>img{object-position:54% center}
+  .rema-brand-card-ramroma>img{object-position:42% center}
+
+  .rema-divider{height:auto;min-height:124px;padding-block:26px}
+  .rema-divider .container{gap:6px!important}
+  .rema-divider p{white-space:normal;text-align:center;font-size:clamp(15px,4.4vw,18px);line-height:1.1}
+  .rema-babechic{font-size:clamp(19px,5.7vw,23px)}
+  .rema-divider .container>span{min-width:7px;max-width:24px}
+
+  .rema-vision{height:390px;background-position:67% center}
+  .rema-vision:before{background:linear-gradient(90deg,rgba(255,255,255,.9) 0%,rgba(255,255,255,.68) 48%,rgba(255,255,255,.04) 78%)}
+  .rema-banner-copy{width:59%;max-width:220px}
+  .rema-banner-copy h2{font-size:clamp(22px,6.5vw,29px);margin-bottom:12px}
+  .rema-banner-copy p{font-size:12px;line-height:1.4}
+
+  .rema-mission-card{margin-bottom:4px}
+  .rema-mission-card img{height:auto;aspect-ratio:1.38/1;object-fit:cover}
+  .rema-mission-card h3{margin-top:15px}
+
+  .rema-values-grid{margin-top:32px;gap:30px 16px}
+  .rema-value-icon{font-size:40px;height:48px}
+
+  .rema-lifestyle-copy,.rema-lifestyle-back .rema-lifestyle-copy{width:68%;max-width:245px}
+  .rema-lifestyle-copy h2{font-size:clamp(25px,7.5vw,32px);line-height:1.08;margin-bottom:14px}
+  .rema-lifestyle-copy p{font-size:12px;line-height:1.4}
+  .rema-lifestyle-copy .rema-btn{margin-top:6px}
+
+  .rema-footer .row{--bs-gutter-y:2rem}
+  .rema-footer .col-6,.rema-footer .col-lg-4,.rema-footer .col-lg-5,.rema-footer .col-lg-3{width:100%;max-width:100%;flex:0 0 100%;text-align:left!important}
+  .rema-footer h2{margin-top:18px}
+  .rema-footer li{margin-bottom:12px}
+  .rema-footer-logos,.rema-payments{justify-content:flex-start!important}
+  .rema-footer-logos>img{width:125px}
+  .rema-copyright{text-align:left!important;overflow-wrap:anywhere}
+}
+
+@media(max-width:399.98px){
+  .rema-header .container-fluid{padding-inline:10px!important}
+  .rema-header-logos{gap:6px}
+  .rema-brand-card{height:370px}
+  .rema-brand-copy{width:48%;padding-inline:10px}
+  .rema-brand-copy p{font-size:10.25px}
+  .rema-brand-rima{width:80px}
+  .rema-brand-rima img:nth-child(2){width:80px}
+  .rema-ramroma-logo{width:94px}
+  .rema-banner-copy{width:61%}
+  .rema-lifestyle-copy,.rema-lifestyle-back .rema-lifestyle-copy{width:70%}
+}
