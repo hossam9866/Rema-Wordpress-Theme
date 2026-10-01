@@ -17,7 +17,6 @@ function rema_section_enabled($id){return(bool)rema_array_get(rema_get_settings(
 function rema_local_icon_asset($item){
  $icon=strtolower((string)($item['icon']??''));$label=strtolower((string)($item['label']??''));$match=$icon.' '.$label;
  $assets=array(
-  'fa-x-twitter'=>'icon-twitter.svg','fa-twitter'=>'icon-twitter.svg','fa-instagram'=>'icon-instagram.svg','fa-facebook'=>'icon-facebook.svg','fa-youtube'=>'icon-youtube.svg',
   'fa-gem'=>'values-quality.svg','fa-wand-magic-sparkles'=>'values-art.svg','fa-building-shield'=>'values-empowerment.svg','fa-person-running'=>'values-playfulness.svg','fa-leaf'=>'values-sustainability.svg'
  );
  foreach($assets as $needle=>$file)if(strpos($match,$needle)!==false)return get_template_directory_uri().'/assets/images/'.$file;
