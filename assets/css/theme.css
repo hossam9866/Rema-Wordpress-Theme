@@ -191,6 +191,10 @@ html,body{width:100%;max-width:100%;overflow-x:hidden}
 }
 
 /* Figma 1:1759 - exact dual-brand card composition. */
+.rema-footer .row{align-items:flex-start}
+.rema-footer-links>h2{margin-top:0}
+.rema-footer-logos{align-items:flex-start}
+
 .rema-brands{padding-block:26px 54px}
 .rema-brands .container{width:1219px;max-width:calc(100% - 48px);margin-inline:auto;padding:0}
 .rema-brands h2{min-height:50px;display:block;line-height:50px;overflow-wrap:normal;word-break:normal}
