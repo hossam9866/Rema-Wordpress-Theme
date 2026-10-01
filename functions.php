@@ -17,10 +17,12 @@ function rema_enqueue_assets() {
     $v = wp_get_theme()->get('Version');
     $font_awesome_path = get_template_directory() . '/assets/vendor/fontawesome/css/all.min.css';
     $font_awesome_version = file_exists($font_awesome_path) ? (string) filemtime($font_awesome_path) : '6.7.2';
+    $theme_css_path = get_template_directory() . '/assets/css/theme.css';
+    $theme_css_version = file_exists($theme_css_path) ? (string) filemtime($theme_css_path) : $v;
     wp_enqueue_style('rema-google-fonts','https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&family=Mulish:wght@400;600;700&display=swap',array(),null);
     wp_enqueue_style('bootstrap','https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css',array(),'5.3.8');
     wp_enqueue_style('rema-font-awesome',get_template_directory_uri().'/assets/vendor/fontawesome/css/all.min.css',array(),$font_awesome_version);
-    wp_enqueue_style('rema-style',get_template_directory_uri().'/assets/css/theme.css',array('bootstrap','rema-font-awesome'),$v);
+    wp_enqueue_style('rema-style',get_template_directory_uri().'/assets/css/theme.css',array('bootstrap','rema-font-awesome'),$theme_css_version);
     wp_enqueue_script('bootstrap','https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js',array(),'5.3.8',true);
     wp_enqueue_script('rema-theme',get_template_directory_uri().'/assets/js/theme.js',array(),$v,true);
 }
