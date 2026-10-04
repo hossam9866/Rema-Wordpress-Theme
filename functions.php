@@ -28,6 +28,38 @@ function rema_enqueue_assets() {
 }
 add_action('wp_enqueue_scripts','rema_enqueue_assets');
 
+function rema_apply_figma_refresh_v2() {
+    if ((int) get_option('rema_figma_design_version', 0) >= 2) return;
+    $settings = (array) get_option('rema_theme_settings', array());
+    if ($settings) {
+        $updates = array(
+            'intro.text' => array(
+                'Move with confidence, style, and elegance in every step.<br>Discover Rima &amp; Ramroma, part of the BabeChic collection, bringing world-class sportswear to the GCC, MENA region, and North Africa.',
+                'Move with confidence, style, and elegance in every step.<br>Discover <strong>Rima &amp; Ramroma</strong>, part of the <strong>BabeChic</strong> collection, bringing world-class sportswear to the GCC, MENA region, and North Africa.'
+            ),
+            'brands.rima_text' => array(
+                'Inspired by modern women, Rima delivers elegant, high-performance activewear for confidence in every move.',
+                'Inspired by Al Reem (Gizalla Al Reem), blends elegance, strength, and grace in activewear for women.'
+            ),
+            'vision.text' => array(
+                'Leading the MENA women’s activewear market with high-performance, trendy designs that support Saudi Arabia’s Quality of Life goals and Vision 2030.',
+                '“Leading the MENA women’s activewear market with high-performance, trendy designs that support Saudi Arabia’s Quality of Life goals and Vision 2030.”'
+            ),
+            'footer.copyright' => array(
+                '© 2025 Rima &amp; Ramroma. All rights reserved.<br>Part of the BabeChic Collection.',
+                '© 2026 Rima &amp; Ramroma. All rights reserved.<br>Part of the BabeChic Collection.'
+            ),
+        );
+        foreach ($updates as $path => $values) {
+            if (rema_array_get($settings, $path, null) === $values[0]) rema_array_set($settings, $path, $values[1]);
+        }
+        if (!rema_array_get($settings, 'divider.logo')) rema_array_set($settings, 'divider.logo', get_template_directory_uri() . '/assets/images/babechic-logo.png');
+        update_option('rema_theme_settings', $settings);
+    }
+    update_option('rema_figma_design_version', 2);
+}
+add_action('init', 'rema_apply_figma_refresh_v2', 5);
+
 function rema_register_polylang_strings() {
     if (!function_exists('pll_register_string')) return;
     $settings=rema_get_settings();
